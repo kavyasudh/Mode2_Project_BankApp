@@ -1,0 +1,21 @@
+
+<div class="col-md-6 offset-md-3">
+    <h3> Deposit Amount </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> accountId</label>
+            <input type="text" class ="form-control" id = "accountId"
+                [(ngModel)] = "deposit.accountId" name = "accountId">
+        </div>
+    
+        <div class="form-group">
+            <label> Amount </label>
+            <input type="text" class ="form-control" id = "amount"
+                [(ngModel)] = "deposit.amount" name = "amount">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

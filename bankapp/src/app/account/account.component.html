@@ -1,0 +1,31 @@
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> id</th>
+            <th> name </th>
+            <th> balance</th>
+            <th> address </th>
+			<th> phone </th>
+			<th> email </th>
+			<th> accountType </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let acount of accounts" >
+            <td> {{ acount.accountid}} </td>
+            <td> {{ acount.name }} </td>
+            <td> {{ acount.balance }} </td>
+			<td> {{ acount.address }} </td>
+			<td> {{ acount.phone }} </td>
+			<td> {{ acount.email }} </td>
+			<td> {{ acount.accountType }} </td>
+			
+            <td>
+                <button (click) = "updateAccount(acount.accountid)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteAccount(acount.accountid)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "accountDetails(acount.accountid)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
